@@ -1,40 +1,14 @@
 \documentclass[noauthor,nooutcomes]{ximera}
 
-\usepackage{todonotes}
-
-\renewcommand{\alt}[1]{\vadjust{\todo{#1}}}
-
-\makeatletter
-\define@key{answer}{alt}{}
-\makeatother
+\input{preamble.tex}
 
 
 
-\colorlet{textColor}{black}
-\colorlet{background}{white}
-\colorlet{penColor}{blue!50!black} % Color of a curve in a plot
-\colorlet{penColor2}{red!50!black}% Color of a curve in a plot
-\colorlet{penColor3}{red!50!blue} % Color of a curve in a plot
-\colorlet{penColor4}{green!50!black} % Color of a curve in a plot
-\colorlet{penColor5}{orange!80!black} % Color of a curve in a plot
-\colorlet{penColor6}{yellow!70!black} % Color of a curve in a plot
-\colorlet{fill1}{penColor!20} % Color of fill in a plot
-\colorlet{fill2}{penColor2!20} % Color of fill in a plot
-\colorlet{fillp}{fill1} % Color of positive area
-\colorlet{filln}{penColor2!20} % Color of negative area
-\colorlet{fill3}{penColor3!20} % Fill
-\colorlet{fill4}{penColor4!20} % Fill
-\colorlet{fill5}{penColor5!20} % Fill
-\colorlet{gridColor}{gray!50} % Color of grid in a plot
-
-
-
-\title{Basic Assignment}
+\title{Assignment}
 \begin{document}
 \begin{abstract}
 \end{abstract}
 \maketitle
-
 
 \section{Calculus}
 
@@ -77,15 +51,14 @@ Here we do a finance question.
    \hline
    \text{Year} & \text{Interest}             & \text{Balance with Interest} & \text{Payment}    & \text{Remaining Principal Balance}\\ \hline
    0  & \$ 0               & ---        & \$ 0     & \$ 5000 \\ \hline
-   1  & \$ \answer[alt={interest in the first year}, tolerance=0]{350} & \$ \answer[alt={balance with interest in the interest in the first year},tolerance=0]{5350}& \$ 1250  & \$ \answer[alt={remaining principal balance in the first year},tolerance=0]{4100} \\ \hline
-   2  & \$ \answer[alt={interest in the second year}, tolerance=0]{287}& \$ \answer[alt={balance with interest in the interest in the second year},tolerance=0]{4387}    & \$ 1250  & \$ \answer[alt={remaining principal balance in the second year},tolerance=0]{3137} \\ \hline
-   3  & \$ \answer[alt={interest in the third year},tolerance=0]{219.59} & \$ \answer[alt={balance with interest in the interest in the third year},tolerance=0]{3356.59} & \$ 1250  & \$ \answer[alt={remaining principal balance in the third year},tolerance=0]{2106.59} \\ \hline
-   4  & \$ \answer[alt={interest in the fourth year},tolerance=0]{147.46} & \$ \answer[alt={balance with interest in the interest in the fourth year},tolerance=0]{2254.05} & \$ 1250  & \$ \answer[alt={remaining principal balance in the fourth year},tolerance=0]{1004.05} \\ \hline
-   5  & \$ \answer[alt={interest in the fifth year},tolerance=0]{70.28}  & \$ \answer[alt={balance with interest in the interest in the fifth year},tolerance=0]{1074.33} & \$ 1250  & \$ \answer[alt={remaining principal balance in the fifth year},tolerance=0]{-175.67} \\ \hline
+   1  & \$ \answer[alt={interest in the first year}, tolerance=0]{350} & \$ \answer[alt={balance with interest in the first year},tolerance=0]{5350}& \$ 1250\alt{payment in the first year is \$1250}  & \$ \answer[alt={remaining principal balance in the first year},tolerance=0]{4100} \\ \hline
+   2  & \$ \answer[alt={interest in the second year}, tolerance=0]{287}& \$ \answer[alt={balance with interest in the second year},tolerance=0]{4387}    & \$ 1250\alt{payment in the second year is \$1250}  & \$ \answer[alt={remaining principal balance in the second year},tolerance=0]{3137} \\ \hline
+   3  & \$ \answer[alt={interest in the third year},tolerance=0]{219.59} & \$ \answer[alt={balance with interest in the third year},tolerance=0]{3356.59} & \$ 1250\alt{payment in the third year is \$1250} & \$ \answer[alt={remaining principal balance in the third year},tolerance=0]{2106.59} \\ \hline
+   4  & \$ \answer[alt={interest in the fourth year},tolerance=0]{147.46} & \$ \answer[alt={balance with interest in the fourth year},tolerance=0]{2254.05} & \$ 1250\alt{payment in the fourth year is \$1250}  & \$ \answer[alt={remaining principal balance in the fourth year},tolerance=0]{1004.05} \\ \hline
+   5  & \$ \answer[alt={interest in the fifth year},tolerance=0]{70.28}  & \$ \answer[alt={balance with interest in the fifth year},tolerance=0]{1074.33} & \$ 1250\alt{payment in the fifth year is \$1250} & \$ \answer[alt={remaining principal balance in the fifth year},tolerance=0]{-175.67} \\ \hline
  \end{array}
  \]
 \end{question}
-
 
 \section{A worked example}
 
@@ -93,8 +66,8 @@ Here we do a finance question.
 Sketch the graph of the function defined by $f(x)=2x^3-3x^2-12x$.
 
 The $y$-intercept is $(0,\answer[given]{0})$. Place this point on your plot.
-\alt{We show the $(x,y)$ plane with a point plotted at the origin.}
-\begin{image}
+
+\begin{image}\alt{We show the $(x,y)$ plane with a point plotted at the origin.}
 \begin{tikzpicture}
 	\begin{axis}[
             domain=-2:4,
@@ -117,7 +90,7 @@ The $y$-intercept is $(0,\answer[given]{0})$. Place this point on your plot.
 
 Which of the following are vertical asymptotes?  Select all that apply.
 
-\begin{selectAll}
+\begin{selectAll}%% This should render automatically as checkboxes
 	\choice{$x=0$}
 	\choice{$x=1$}
 	\choice{$x=-1$}
@@ -128,7 +101,7 @@ Which of the following are vertical asymptotes?  Select all that apply.
 In this case, $f(x) =2x^3-3x^2-12x$, we can find the
 $x$-intercepts.   There are three $x$ intercepts.  Call them $a$, $b$, and $c$, and order them such that $a<b<c$.  Then
 
-\begin{align*}
+\begin{align*} %% Alt can default to mathml
   a &= \answer[given]{\frac{3-\sqrt{105}}{4}},\\
   b &= \answer[given]{0}, \\
   c &= \answer[given]{\frac{3+\sqrt{105}}{4}}.
@@ -137,7 +110,7 @@ $x$-intercepts.   There are three $x$ intercepts.  Call them $a$, $b$, and $c$, 
 
 
   Which of the following best describes the end behavior of $f$ as $x \to \infty$?		
-  \begin{multipleChoice}
+  \begin{multipleChoice} %% This should render automatically as radiobuttons
     \choice[correct]{$f$  increases without bound.}
     \choice{$f$ decreases without bound.}
     \choice{$f$ has a horizontal asymptote.}
@@ -170,7 +143,7 @@ a = \answer[given]{-1}\qquad\text{and}\qquad b = \answer[given]{2}.
 \]
 
 Mark the critical points $x=2$ and $x=-1$ on your plot. %%BADBAD either or answer would be nice
-\begin{image}
+\begin{image}\alt{We add the critical points $x=-1$ and $x=2$ to the plot with the origin plotted as a point on the curve.}
 \begin{tikzpicture}
 	\begin{axis}[
             domain=-2:4,
