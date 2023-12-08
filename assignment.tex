@@ -1,5 +1,13 @@
 \documentclass[noauthor,nooutcomes]{ximera}
 
+\usepackage{todonotes}
+
+\renewcommand{\alt}[1]{\vadjust{\todo{#1}}}
+
+\makeatletter
+\define@key{answer}{alt}{}
+\makeatother
+
 
 
 \colorlet{textColor}{black}
@@ -31,9 +39,9 @@
 \section{Calculus}
 
 \begin{problem}
-    Compute the derivative of $\alt{f of x equals three x squared plus
-      two x minus 5} f(x) = 3x^2 + 2x -
-    5 \begin{prompt}f'(x) = \answer{6x + 2}\end{prompt}$.%% \answer comes in with built in default \alt{answer}
+  Compute the derivative of $f(x) = 3x^2 + 2x - 5 %% Math mode defaults to mathml, prompt is read.
+  \begin{prompt}f'(x) = \answer{6x + 2}%% \answer comes in with built in default \alt{answer}
+  \end{prompt}$.
 \end{problem}
 
 \section{Finance}
@@ -57,7 +65,7 @@ Here we do a finance question.
   compounded annually.  We will approach this problem numerically.
   Use your guess for the annual payment, and complete the table
   below. Round all answers to the nearest cent.
-  \[
+  \[ 
   \alt{ A loan pay-off table showing the 0th year in the first row,
     followed by the first year in the second row, followed by the
     second year in the third row, the third year in the fourth row,
@@ -65,20 +73,19 @@ Here we do a finance question.
     year, the second column is the interest, the third column is the
     balance with interest, the fourth column is the payment, the fifth
     column is the remaining principal balance.}
-
-    
- \begin{array}{|c|c|c|c|c|}
+  \begin{array}{|c|c|c|c|c|}
    \hline
    \text{Year} & \text{Interest}             & \text{Balance with Interest} & \text{Payment}    & \text{Remaining Principal Balance}\\ \hline
-   0  & \$ 0               & ---                   & \$ 0     & \$ 5000 \\ \hline
-   1  & \$ \answer[alt={interest in the first year}, tolerance=0]{350}    & \$ \answer[alt={balance with interest in the interest in the first year},tolerance=0]{5350}    & \$ 1250  & \$ \answer[alt={remaining principal balance},tolerance=0]{4100} \\ \hline
-   2  & \$ \answer[tolerance=0]{287}    & \$ \answer[tolerance=0]{4387}    & \$ 1250  & \$ \answer[tolerance=0]{3137} \\ \hline
-   3  & \$ \answer[tolerance=0]{219.59} & \$ \answer[tolerance=0]{3356.59} & \$ 1250  & \$ \answer[tolerance=0]{2106.59} \\ \hline
-   4  & \$ \answer[tolerance=0]{147.46} & \$ \answer[tolerance=0]{2254.05} & \$ 1250  & \$ \answer[tolerance=0]{1004.05} \\ \hline
-   5  & \$ \answer[tolerance=0]{70.28}  & \$ \answer[tolerance=0]{1074.33} & \$ 1250  & \$ \answer[tolerance=0]{-175.67} \\ \hline
+   0  & \$ 0               & ---        & \$ 0     & \$ 5000 \\ \hline
+   1  & \$ \answer[alt={interest in the first year}, tolerance=0]{350} & \$ \answer[alt={balance with interest in the interest in the first year},tolerance=0]{5350}& \$ 1250  & \$ \answer[alt={remaining principal balance in the first year},tolerance=0]{4100} \\ \hline
+   2  & \$ \answer[alt={interest in the second year}, tolerance=0]{287}& \$ \answer[alt={balance with interest in the interest in the second year},tolerance=0]{4387}    & \$ 1250  & \$ \answer[alt={remaining principal balance in the second year},tolerance=0]{3137} \\ \hline
+   3  & \$ \answer[alt={interest in the third year},tolerance=0]{219.59} & \$ \answer[alt={balance with interest in the interest in the third year},tolerance=0]{3356.59} & \$ 1250  & \$ \answer[alt={remaining principal balance in the third year},tolerance=0]{2106.59} \\ \hline
+   4  & \$ \answer[alt={interest in the fourth year},tolerance=0]{147.46} & \$ \answer[alt={balance with interest in the interest in the fourth year},tolerance=0]{2254.05} & \$ 1250  & \$ \answer[alt={remaining principal balance in the fourth year},tolerance=0]{1004.05} \\ \hline
+   5  & \$ \answer[alt={interest in the fifth year},tolerance=0]{70.28}  & \$ \answer[alt={balance with interest in the interest in the fifth year},tolerance=0]{1074.33} & \$ 1250  & \$ \answer[alt={remaining principal balance in the fifth year},tolerance=0]{-175.67} \\ \hline
  \end{array}
  \]
 \end{question}
+
 
 \section{A worked example}
 
@@ -86,6 +93,7 @@ Here we do a finance question.
 Sketch the graph of the function defined by $f(x)=2x^3-3x^2-12x$.
 
 The $y$-intercept is $(0,\answer[given]{0})$. Place this point on your plot.
+\alt{We show the $(x,y)$ plane with a point plotted at the origin.}
 \begin{image}
 \begin{tikzpicture}
 	\begin{axis}[
