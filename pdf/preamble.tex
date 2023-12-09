@@ -1,0 +1,30 @@
+\usepackage{todonotes}
+
+\renewcommand{\alt}[1]{}
+
+\makeatletter
+\define@key{answer}{alt}{}
+\makeatother
+
+\let\image\relax
+\let\endimage\relax
+\NewEnviron{image}{
+  \begin{center}\BODY\end{center}% center
+}
+
+\colorlet{textColor}{black}
+\colorlet{background}{white}
+\colorlet{penColor}{blue!50!black} % Color of a curve in a plot
+\colorlet{penColor2}{red!50!black}% Color of a curve in a plot
+\colorlet{penColor3}{red!50!blue} % Color of a curve in a plot
+\colorlet{penColor4}{green!50!black} % Color of a curve in a plot
+\colorlet{penColor5}{orange!80!black} % Color of a curve in a plot
+\colorlet{penColor6}{yellow!70!black} % Color of a curve in a plot
+\colorlet{fill1}{penColor!20} % Color of fill in a plot
+\colorlet{fill2}{penColor2!20} % Color of fill in a plot
+\colorlet{fillp}{fill1} % Color of positive area
+\colorlet{filln}{penColor2!20} % Color of negative area
+\colorlet{fill3}{penColor3!20} % Fill
+\colorlet{fill4}{penColor4!20} % Fill
+\colorlet{fill5}{penColor5!20} % Fill
+\colorlet{gridColor}{gray!50} % Color of grid in a plot
