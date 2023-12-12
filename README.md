@@ -6,6 +6,12 @@ At the top level you will find master LaTeX documents. Do not compile
 these documents. Instead work within the folders. Note, the preamble
 for the document may be different in each folder.
 
+## For the web
+
+For some (perhaps) helpful discussions, see:
+
+* https://unplannedobsolescence.com/blog/behavior-belongs-in-html/
+* https://stackoverflow.com/questions/26007744/image-overlay-on-site-but-keeping-content-clickable
 
 
 ## Some notes on Ximera commands
