@@ -16,10 +16,24 @@ For some (perhaps) helpful discussions, see:
 
 ## Some notes on Ximera commands
 
-* \answer needs default alt-text of "unanswered" that is replaced with "answered VALUE Correct/Incorrect" after answering. 
-* \answer needs optional argument alt={my groovy text} which modifies the default by "'my groovy text' unanswered" or "'my groovy text' answered VALUE"
+* `\answer` needs default alt-text of "unanswered" that is replaced with "answered VALUE Correct/Incorrect" after answering. 
+* `\answer` needs optional argument `alt={my groovy text}` which modifies the default by "'my groovy text' unanswered" or "'my groovy text' answered VALUE"
 * Math mode could default to mathml if no alt-text is given
 * The text given by accessibility could be the underlying text in the browser DVI
-* \wordChoice needs to default to radio buttons
-* \multipleChoice needs to default to radio buttons
-* \selectAll needs to default to checkboxes
+* `\wordChoice` needs to default to radio buttons
+* `\multipleChoice` needs to default to radio buttons
+* `\selectAll` needs to default to checkboxes
+* Is it even possible (within latex) to compile in such a way that a model such as:
+```latex
+\[
+\alt{here}
+Text to be replaced?
+\]
+```
+Maybe a better model is:
+```latex
+\alt{Text to be shown} %% and 
+
+\alt[Text to be replaced]{text to be shown}
+```
+Things like \answer 
