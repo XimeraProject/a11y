@@ -13,6 +13,12 @@ For some (perhaps) helpful discussions, see:
 * https://unplannedobsolescence.com/blog/behavior-belongs-in-html/
 * https://stackoverflow.com/questions/26007744/image-overlay-on-site-but-keeping-content-clickable
 
+## For PDF
+
+See 
+* https://docs.google.com/presentation/d/1H1fNuuSVnwgtKONojRLZvUpWPvfV__avWT_rpYZR-Ro/edit#slide=id.p
+* https://mirror.mwt.me/ctan/macros/latex/contrib/accsupp/accsupp.pdf
+
 
 ## Some notes on Ximera commands
 
