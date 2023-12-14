@@ -18,7 +18,7 @@ For some (perhaps) helpful discussions, see:
 See 
 * https://docs.google.com/presentation/d/1H1fNuuSVnwgtKONojRLZvUpWPvfV__avWT_rpYZR-Ro/edit#slide=id.p
 * https://mirror.mwt.me/ctan/macros/latex/contrib/accsupp/accsupp.pdf
-
+* Try built-in screen readers. 
 
 ## Some notes on Ximera commands
 
