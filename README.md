@@ -30,10 +30,10 @@ For some (perhaps) helpful discussions, see:
 Text to be replaced?
 \]
 ```
-Maybe a better model is:
+A different model is:
 ```latex
 \alt{Text to be shown} %% and 
 
 \alt[Text to be replaced]{text to be shown}
 ```
-Things like \answer 
+
