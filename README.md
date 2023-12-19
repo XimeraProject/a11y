@@ -8,8 +8,12 @@ for the document may be different in each folder.
 
 ## For the web
 
-For some (perhaps) helpful discussions, see:
+For some (perhaps) helpful links/discussions, see:
 
+
+* https://ctan.org/pkg/catdvi?lang=en 
+* https://ctan.org/pkg/srcltx?lang=en
+* https://ctan.org/pkg/dvi2tty?lang=en
 * https://unplannedobsolescence.com/blog/behavior-belongs-in-html/
 * https://stackoverflow.com/questions/26007744/image-overlay-on-site-but-keeping-content-clickable
 
@@ -36,10 +40,10 @@ See
 Text to be replaced?
 \]
 ```
-A different model is:
+A different model (though perhaps impractical) is:
 ```latex
 \alt{Text to be shown} %% and 
 
 \alt[Text to be replaced]{text to be shown}
 ```
-
+The second syntx seems problematic with examples where the `\answer` boxes are within content that must be alt-ed out. For example, a large array/table with answer boxes, or a tikz picture with answer boxes.
