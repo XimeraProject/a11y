@@ -11,9 +11,9 @@ for the document may be different in each folder.
 For some (perhaps) helpful links/discussions, see:
 
 
-* https://ctan.org/pkg/catdvi?lang=en 
-* https://ctan.org/pkg/srcltx?lang=en
-* https://ctan.org/pkg/dvi2tty?lang=en
+* https://ctan.org/pkg/catdvi?lang=en  (catdvi)
+* https://ctan.org/pkg/srcltx?lang=en  (srcltx)
+* https://ctan.org/pkg/dvi2tty?lang=en (dvi2tty)
 * https://unplannedobsolescence.com/blog/behavior-belongs-in-html/
 * https://stackoverflow.com/questions/26007744/image-overlay-on-site-but-keeping-content-clickable
 
