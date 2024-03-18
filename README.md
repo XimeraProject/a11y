@@ -16,6 +16,7 @@ For some (perhaps) helpful links/discussions, see:
 * https://ctan.org/pkg/dvi2tty?lang=en (dvi2tty)
 * https://unplannedobsolescence.com/blog/behavior-belongs-in-html/
 * https://stackoverflow.com/questions/26007744/image-overlay-on-site-but-keeping-content-clickable
+* https://jacobbartlett.substack.com/p/oh-sht-my-app-is-successful-and-i (a11y discussion)
 
 ## For PDF
 
