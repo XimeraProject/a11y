@@ -40,11 +40,34 @@ See
 \alt{here}
 Text to be replaced?
 \]
+
+\[
+\alt{two plus two equals}
+2+2 = \answer{4} %% answer would have its own alt manifestation
+\]
 ```
 A different model (though perhaps impractical) is:
 ```latex
-\alt{Text to be shown} %% and 
+\alt{Text to be shown}
+\alt{Some message in the middle of the text}
+
+%% and 
 
 \alt[Text to be replaced]{text to be shown}
+\alt[\[ 2+2=\answer{4} \]]{two plus two}
 ```
-The second syntx seems problematic with examples where the `\answer` boxes are within content that must be alt-ed out. For example, a large array/table with answer boxes, or a tikz picture with answer boxes.
+
+A different model yet
+```latex
+%% use options for environments like so:
+
+\begin{environment}[alt]
+Something complicated
+\end{environment}`
+%% Here, we would have a file, that has all the "alt" text of the document.
+%% Math mode and answer would automatically be included. 
+```
+
+Another idea
+We implemnet `\alt` for injecting random text. Then all math mode, `\answer`, `\tabular`, `image` 
+automatically get alt entires in some document. 
