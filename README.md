@@ -10,14 +10,14 @@ for the document may be different in each folder.
 
 For some (perhaps) helpful links/discussions, see:
 
-
+* https://github.com/latex3/tagging-project/discussions/72
 * https://ctan.org/pkg/catdvi?lang=en  (catdvi)
 * https://ctan.org/pkg/srcltx?lang=en  (srcltx)
 * https://ctan.org/pkg/dvi2tty?lang=en (dvi2tty)
 * https://unplannedobsolescence.com/blog/behavior-belongs-in-html/
 * https://stackoverflow.com/questions/26007744/image-overlay-on-site-but-keeping-content-clickable
 * https://jacobbartlett.substack.com/p/oh-sht-my-app-is-successful-and-i (a11y discussion)
-
+* https://ctan.org/pkg/axessibility?lang=en
 ## For PDF
 
 See 
