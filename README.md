@@ -82,14 +82,14 @@ For some (perhaps) helpful links/discussions, see:
 * https://stackoverflow.com/questions/26007744/image-overlay-on-site-but-keeping-content-clickable
 * https://jacobbartlett.substack.com/p/oh-sht-my-app-is-successful-and-i (a11y discussion)
 * https://ctan.org/pkg/axessibility?lang=en
-## For PDF
+### For PDF
 
 See
 * https://docs.google.com/presentation/d/1H1fNuuSVnwgtKONojRLZvUpWPvfV__avWT_rpYZR-Ro/edit#slide=id.p
 * https://mirror.mwt.me/ctan/macros/latex/contrib/accsupp/accsupp.pdf
 * Try built-in screen readers.
 
-## Some notes on Ximera commands
+### Some notes on Ximera commands
 
 * `\answer` needs default alt-text of "unanswered" that is replaced with "answered VALUE Correct/Incorrect" after answering.
 * `\answer` needs optional argument `alt={my groovy text}` which modifies the default by "'my groovy text' unanswered" or "'my groovy text' answered VALUE"
