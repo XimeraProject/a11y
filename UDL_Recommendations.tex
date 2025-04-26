@@ -1,0 +1,184 @@
+\documentclass{ximera}
+\usepackage{tikz}
+\usepackage{color}
+\usepackage{amsmath,amssymb,amsfonts}
+%\usepackage{helvet}
+%\renewcommand{\familydefault}{\sfdefault}
+\author{Jeffrey Kuan, Ph.D., CPACC, ADS}
+\input{../preamble} %% Loads the graphics path
+\title{UDL Recommendations for Ximera}
+\license{CC: 0}
+\begin{document}
+ 
+\begin{abstract}
+   I will present recommendations for UDL (Universal Design in Learning) for Ximera.
+\end{abstract}
+\maketitle
+%\part{Introduction}
+%\chapterstyle
+%    \activity{basics/basicWorksheet}
+%    \sectionstyle
+%    \activity{basics/exercises/someExercises}
+ 
+%    \chapterstyle
+%    \activity{basics/graphicsInteractives}
+ 
+Accessibility statement: This webpage is WCAG2.1AA, thanks to Tailor Swift Bot. It was manually
+tested on NVDA. 
+ 
+\includegraphics[width=10cm,height=7cm,alt="Company Logo of Tailor Swift Bot"]{TSBotsLogo.png}
+ 
+\section{Introduction}
+
+The UDL Guidelines were developed by CAST \cite{CAST} (Center for Applied Special Technology), and are 
+ ``a framework developed ... to improve and optimize teaching and learning for all people based on scientific insights into how humans learn.''
+The current version, UDL Guidelines 3.0, were released on July 30th, 2024. As part of my CPACC (Certified Professional in Accessibility Core Competencies) 
+credentials, I studied UDL Guidelines 2.2. Since the release of UDL 3.0, I completed 18 hours of Continuing Accessibility Education Credits using the
+CAST modules located at \cite{NCAEM}. Additionally, I studied the documents highlighting the differences between UDL 2.2 and UDL 3.0.
+
+The guidelines are categorized into several categories:
+
+\begin{itemize}
+\item Multiple Means of Engagement, the “why” of learning. For example, a student in a math class may ask \underline{why} they are learning the material.
+In mathematical parlance, this is often asking for the ``motivation'' behind the math, whether it is theory or to solve a real--world problem.
+If students understand why something is being taught to them, they are more likely to be engaged. 
+\item Multiple Means of Representation, the “what” of learning. Here, the ``what'' refers to \underline{what} the students are learning. For example, a certain mathematical subject can be presented to the
+students in multiple ways. Considering the example of integration, it is usually presented both as anti--differentiation and the area under the graph of
+the function. 
+\item Multiple Means of Action and Expression, the “how” of learning. This refers to \underline{how} students can express their knowledge to the
+instructor, usually in the form of homework assignments, projects, or examinations. 
+\end{itemize}
+
+Mathematics education poses unique challenges for UDL. Below, I elaborate on a few examples. 
+
+
+Due to mathematics being both ``pure'' and ``applied'', it can be difficult to engage the students. As a concrete example, a probability class
+could have students from both a pure mathematical background, as well as statistics and engineering students. The formula for the expectation
+(or mean) of a real--valued continuous random variable
+\[
+\mathbb{E}[X] = \mu_X = \int_{\mathbb{R}} x f_X(x)dx
+\]
+has a natural real--world application. For instance, if you pick a real number between 0 and 1 uniformly at random, the formula says the mean is
+\[
+\int_0^1 xdx = \frac{1}{2},
+\]
+which matches most people's intuition. However, a pure mathematician may prefer to understand this formula in the context of measure theory, where it would 
+read as
+\[
+\int_{\Omega} X d\mathbb{P}. 
+\]
+These are quite different approaches and motivations, and it can be difficult to motivate students of different backgrounds. 
+
+To adhere to ``multiple means of representation'', the most common methods involve using a mathematical statement with symbols, a picture, and an intuitive
+description in words. For certain levels of mathematics, this can be difficult becase some concepts either do not have intuitive descriptions or can not
+be visualized (the famous quote about the equivalence of Axiom of Choice is an example). As an example, we can consider this image:
+
+\begin{figure}
+\includegraphics[alt="a bunch of squiggles"]{mumforddrawing.jpg}
+\caption{Mumford's drawing of \( Spec(Z[x]) \) }
+\end{figure}
+
+Because I am not an algebraic geometer, I cannot describe this image, nor could an instructional designer. However, here is some alternative text provided 
+by someone else:
+
+\begin{blockquote}
+There are straight vertical lines with one for each prime number. The first four have been labelled V((p)) for the respective primes p. Each vertical line ends in a squiggle at the top which is labelled with its generic point [(p)].
+There are several curves going across the diagram representing vanishing sets of irreducible polynomials. Each of these curves ends in a squiggle at the right which is labelled with its generic point [(f)] for the respective irreducible polynomial.
+These curves with generic point [(f)] intersect with the vertical lines at various points labelled by [(p,g)] for the corresponding prime p and an irreducible polynomial (g), such that f can be generated by p and g.
+There is a big squiggle labelled ``[(0)] generic point''.
+\end{blockquote}
+
+``Multiple means of action and expression'' is difficult in math, because in lower--level courses there is usually only one right answer. However, 
+there is some leeway for showing partial credit. For proof--based classes, there is more flexibility. 
+
+In this document, I will outline my UDL suggestions for Ximera, organized by guidelines. 
+
+\section{Engagement}
+
+\subsection{Motivations}
+
+An author using Ximera should have the ability to designate certain motivations with either ``pure''
+or ``applied'' (or other options, depending on the author). Students can then skip through motivations
+that are not interesting to them. A LaTeX command that creates accordions would help clarify to the 
+student what can be safely skipped. 
+
+
+\section{Representation}
+
+\subsection{Intent Tag}
+
+One of the most natural ways to represent mathematics in multiple modes is with speech. Most instructors
+do this instictively, by reading the text that they are writing during a lecture. In web accessibility, 
+this is commonly called ``alternative text.'' However, I would recommend a different terminology for
+several reasons. 
+
+First, one of the updates from UDL 3.0 is to avoid the phrase ``alternative'' as it implies that one 
+format is ``standard.'' Second, the phrase ``alternative text'' is often used in the context of images, 
+which leads many authors to insert images of math equations, which is outdated mode of representation 
+\cite{PSU}. Third, MathML4 will release an ``intent'' environment which allows for the author's intent
+for how a math expression should be spoken. 
+
+My recommendation is for Ximera to include a command or environment in LaTeX, called ``intent'', 
+which will allow the author to insert their intended representation of the math expression in speech.
+Neil Soiffer, one of the main developers of MathML, has also 
+suggested creating a PDF/UA as an intermediary to MathML.
+
+\subsubsection{MathML related suggestions}
+
+Additionally, Peter Korn at Amazon suggested SSML for more natural sounding text--to--speech, with better
+prosody. He also suggested that the reader have the option to specify verbosity of alternative text. 
+Also, in the event that content is in a language other than English, Ximera should reach out 
+to me to check on the MathML--to--Braille conversion, since Nemeth Braille is specific to English. 
+
+\subsection{Spacing and Fonts}
+
+This recommendation is more specific for dyslexic readers. The British Dyslexia Association has 
+style guidelines \cite{BD}. In the context of mathematics, there are unique challenges, as some evidence 
+suggests that some readers prefer serif fonts for math symbols. The ``ideal'' recommendation is a setting
+that allowed the reader to choose their own font size, tracking and line spacing. An acceptable recommendation
+is to prevent authors from creating content that is not dyslexia--friendly (either with a CSS file or
+by altering the Ximera document class). 
+
+There is also a Swedish Dyslexia Institution which released guidelines, although it is in Swedish. 
+I can request a translation if desired. 
+
+
+
+
+
+\subsection{Videos}
+
+Ximera has a command to link to YouTube videos. Of course, the videos should have accurate captioning. 
+Additionally, the transcription should be downloadable (this is in WCAG2.1AA, section 1.2.3). 
+I would recommend a Ximera command that lets the reader download the transcription. 
+
+\subsection{Accessibility Statements}
+
+An important feature of the above suggestions is to make the reader aware of different acessibility features.
+Authors using Ximera should have the ability to insert a stanard accessibility statement (see \cite{W3C} 
+for suggestions), with a designated contact person. Of course, authors can also refer to their home 
+institutions as well. 
+
+\section{Action and Expression}
+
+\subsection{Answer Environment}
+
+Ideally, students could submit their written work and receive partial credit. So for example, 
+a student who gets an answer wrong, but with a common mistake, can be informed of this possibility. 
+If possible, the answer environment should give more detailed feedback. Also, as an accessiblity 
+requirement, we should check that the form works with assistive technology (speech--to--text, etc.)
+
+
+
+
+
+\begin{thebibliography}{99}
+   \bibitem{CAST} CAST (2024). Universal Design for Learning Guidelines version 3.0. Retrieved from \url{https://udlguidelines.cast.org}
+   \bibitem{NCAEM} CAST. National Center on Accessible Educational Materials. https://aem.cast.org/learning-series/online-learning-series-accessible-materials-technologies
+   \bibitem{UDL} CAST. https://www.cast.org/contact/udlg-docs/
+   \bibitem{PSU} Penn State University. https://accessibility.psu.edu/math/equations/
+   \bibitem{BD} British Dyslexia Association. https://www.bdadyslexia.org.uk/advice/employers/creating-a-dyslexia-friendly-workplace/dyslexia-friendly-style-guide
+   \bibitem{W3C} World Wide Web Consortium. https://www.w3.org/WAI/planning/statements/
+\end{thebibliography}
+
+\end{document}
