@@ -25,7 +25,7 @@ Ximera documents are already "somewhat" accessible in this domain. However, it c
 ## `\answer`
 
 The command `\answer` first needs to be implemented in a modern version of TeX4ht/MathJax.
-We should look at how **standard forms** work and emulate this. With that said, 
+We should look at how **standard forms** work and emulate this, see: https://www.w3.org/WAI/tutorials/forms/ . With that said, 
 it needs to automatically have
 - "Blank answer box"
 - "Answered with TYPED-ANSWER not evaluated."
